@@ -121,7 +121,7 @@ ________________________________________
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/25%20link%20with%20Sentinel02.jpg?raw=true)
 
--- Click Content hub > click necessary item > Install
+-- Click Content hub > tick necessary item > Install
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/26%20link%20with%20Sentinel03.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/27%20link%20with%20Sentinel04.jpg?raw=true)
