@@ -192,7 +192,12 @@ Syslog
 
 •	Sentinel > Analytics > + Create > Paste KQL > Set frequency & threshold
 
-
+-- Create Analytics rule for Brute force Window case
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/84%20Analytics%20rule%20Brute%20Force.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/85%20Analytics%20rule%20Brute%20Force%2001.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/86%20Analytics%20rule%20Brute%20Force%2002.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/87%20Analytics%20rule%20Brute%20Force%2003.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/88%20Analytics%20rule%20Brute%20Force%2004.jpg?raw=true)
 
 
 
