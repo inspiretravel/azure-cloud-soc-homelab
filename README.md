@@ -211,7 +211,7 @@ ________________________________________
 
 ⚠️ Step 5: Incident Response
 
-🔹Incident Handling
+[🔹Incident Handling]
 Sentinel > Incidents> View full detail
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard.jpg?raw=true)
 
@@ -255,7 +255,7 @@ ________________________________________
 
 [🔹 Build Dashboards]
 
-•	Create watchlist and upload csv file including ip address source by country
+-- Create watchlist and upload csv file including ip address source by country
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/55%20create%20workbook01.JPG?raw=true)
 
@@ -270,9 +270,9 @@ ________________________________________
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/60%20Create%20workbook01.jpg?raw=true)
 
-•	Create workbook > Add map, bar chart, and table visuals
+-- Create workbook > Add map, bar chart, and table visuals
 
-•	Save as Attack Map and can pin to Azure dashboard
+-- Save as Attack Map and can pin to Azure dashboard
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/61%20Create%20Workbook02.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/62%20Create%20workbook03.jpg?raw=true)
