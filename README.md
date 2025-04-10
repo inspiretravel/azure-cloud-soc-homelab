@@ -48,7 +48,7 @@ ________________________________________
 
 🛠️ Step 1: Build the Environment
 
-🔹 [Create Resource Group]
+[🔹 Create Resource Group]
 
 -- Search or click resource groups >  create > 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/01%20Create%20RG1.jpg?raw=true) 
@@ -61,7 +61,7 @@ ________________________________________
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/03%20Create%20RG3.jpg?raw=true)
 
 
-🔹 [Deploy Virtual Machines]
+[🔹 Deploy Virtual Machines]
 
 Create window machine and Linux machine for sending the log to Sentinel
 
@@ -81,7 +81,7 @@ ________________________________________
 
 📊 Step 2: Configure Log Analytics
 
-🔹 [Create Log Analytics Workspace]
+[🔹 Create Log Analytics Workspace]
 
 -- Search or click Log Analytics  >  create > 
 
@@ -92,7 +92,7 @@ ________________________________________
 
   
 
-🔹 [Enable Defender for Cloud]
+[🔹 Enable Defender for Cloud]
 
 •	Onboard Windows VM via Azure Security Center > Microsoft Defender portal.
 
@@ -107,13 +107,13 @@ ________________________________________
 
 🧠 Step 3: Activate Microsoft Sentinel
 
-🔹 [Enable Sentinel]
+[🔹 Enable Sentinel]
 
 •	Azure Portal > Microsoft Sentinel > + Add > Select DLGR1-LA
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/23%20link%20with%20Sentinel01.jpg?raw=true)
 
-🔹 [Add Data Connectors]
+[🔹 Add Data Connectors]
 
 •	Enable for Windows Security Events, Syslog, Defender for cloud etc
 
@@ -126,7 +126,7 @@ ________________________________________
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/26%20link%20with%20Sentinel03.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/27%20link%20with%20Sentinel04.jpg?raw=true)
 
-🔹 [Create Data Collection Rule]
+[🔹 Create Data Collection Rule]
 
 -- Once installation is done > go to the desired content title > manage
 
@@ -141,7 +141,7 @@ ________________________________________
 
 
 
-🔹 [Verify Log Ingestion]
+[🔹 Verify Log Ingestion]
 
 SecurityEvent | take 10
 
@@ -149,19 +149,16 @@ SecurityEvent | take 10
 
 
 
-🔗 Compliance between step 1 to 3
+[🔗 Compliance] 
 
-•	ISO 27001 A.12.4.1: Event logging enabled
+Applied in step 1 to 3
 
-•	Essential Eight: Endpoint hardening aligns with Patch Applications
+| ISO 27001                                      | Essential Eight        |
+|-----------------------------------------------|----------------------------|
+| Event logging enabled      |Application Control supported by log visibility |
+| Integrity of logs via centralized collection| |
+| Admin/operator activity tracking |Admin privilege monitoring|
 
-•	ISO 27001 A.12.4.2: Integrity of logs via centralized collection
-
-•	Essential Eight: Application Control supported by log visibility
-
-•	ISO 27001 A.12.4.3: Admin/operator activity tracking
-
-•	Essential Eight: Admin privilege monitoring
 
 ________________________________________
 
