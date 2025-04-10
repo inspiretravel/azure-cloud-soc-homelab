@@ -49,15 +49,23 @@ ________________________________________
 
 🔹 Create Resource Group
 
-az group create --name CyberSecLab --location australiaeast
-
+Search or click resource groups >  create > 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/01%20Create%20RG1.jpg?raw=true) 
+-- Input resource group name DL-RG1 and region (Asia Pacific)australia east
+
+-- Click next or Review+create
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/02%20Create%20RG2.jpg?raw=true)
+
+-- Go back to resource group page
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/03%20Create%20RG3.jpg?raw=true)
+
 
 🔹 Deploy Virtual Machines
 
+Search or click virtual machine >  create >
+
 •	Windows Server 2022: Assign public IP (to be restricted later).
+
 •	Ubuntu 20.04: Enable SSH, configure ufw, assign public IP.
 
 🔹 Enable Defender for Endpoint
