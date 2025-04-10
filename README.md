@@ -129,15 +129,21 @@ ________________________________________
 
 -- Select select data source and destination
 
+Windows example
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/29%20Create%20Data%20connector01.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/30%20Create%20Data%20connector02.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector03.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/33%20Create%20Data%20connector04.jpg?raw=true)
+
+Linux Example
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/93%20linux%20VM%20collection%20log.jpg?raw=true)
 
 -- Check the status of data connectors
 
+Under Data connectors page
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/35%20Create%20Data%20connector05.jpg?raw=true)
+
+Under Log Analytics workspace > Agent
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/94%20LAW%20linux%20connect%20status.jpg?raw=true)
 
 
