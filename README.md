@@ -49,7 +49,7 @@ ________________________________________
 
 🔹 Create Resource Group
 
-Search or click resource groups >  create > 
+-- Search or click resource groups >  create > 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/01%20Create%20RG1.jpg?raw=true) 
 -- Input resource group name DL-RG1 and region (Asia Pacific)australia east
 
@@ -62,9 +62,20 @@ Search or click resource groups >  create >
 
 🔹 Deploy Virtual Machines
 
-Search or click virtual machine >  create >
+-- Search or click virtual machine >  create >
 
-•	Windows Server 2022: Assign public IP (to be restricted later).
+•	Windows 10 Pro, same region
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/04%20Create%20VM%20win01.jpg?raw=true)
+
+-- Input the account info and confirm the network setting > create
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/05%20Create%20VM%20win02.jpg?raw=true)
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/06%20Create%20VM%20win03.jpg?raw=true)
+
+
+
 
 •	Ubuntu 20.04: Enable SSH, configure ufw, assign public IP.
 
