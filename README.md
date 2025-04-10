@@ -163,10 +163,21 @@ ________________________________________
 🔹 Brute-Force Detection (Windows)
 
 SecurityEvent
+
 | where EventID == 4625
-| summarize Attempts = count() by SourceIP, Computer
+
+| summarize Attempts = count() by IPaddress, Computer
+
 | where Attempts > 10
+
 | order by Attempts desc
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/82%20KQL%20Brute%20Force.jpg?raw=true)
+
+Finding: Within 24 hours, the most bruce force attack came from Netherlands
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/83%20KQL%20Brute%20Force%20IP.jpg?raw=true)
+
 
 🔹 SSH Failures (Linux)
 
