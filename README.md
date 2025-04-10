@@ -242,11 +242,11 @@ ________________________________________
 
 [🔹 Build Dashboards]
 
-•	Create watchlist and upload the ip source by country . 
-
--- Named the watchlist as geoip, alias as geoip, searchkey as network
+•	Create watchlist and upload csv file including ip address source by country
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/55%20create%20workbook01.JPG?raw=true)
+
+-- Named the watchlist as geoip, alias as geoip, searchkey as network
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/57%20Create%20workbook02.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/58%20Create%20workbook03.jpg?raw=true)
 
@@ -270,7 +270,6 @@ ________________________________________
 |ISO 27001|Essential Eight|
 |-----------------------------------------------|----------------------------|
 |Log visualization enhances event review|Improves threat visibility and response time|
-
 
 ________________________________________
 
