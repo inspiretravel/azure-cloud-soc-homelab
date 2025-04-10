@@ -5,7 +5,7 @@ Detection, Monitoring, and Response with Microsoft Sentinel
 ________________________________________
 🔍 Project Overview:
 
-This home lab builds a simulated, enterprise-grade Security Operations Center (SOC) using Microsoft Azure. It integrates Microsoft Sentinel (SIEM), Log Analytics, and Microsoft Defender for Endpoint to detect, investigate, and respond to real-world threats. The lab aligns with ISO 27001 and Australia’s Essential Eight, providing compliance-driven security operations experience.
+This home lab builds a simulated, enterprise-grade Security Operations Center (SOC) using Microsoft Azure. It integrates Microsoft Sentinel (SIEM), Log Analytics, and Microsoft Defender for Cloud to detect, investigate, and respond to real-world threats. The lab aligns with ISO 27001 and Australia’s Essential Eight, providing compliance-driven security operations experience.
 
 ________________________________________
 🎯 Objectives:
