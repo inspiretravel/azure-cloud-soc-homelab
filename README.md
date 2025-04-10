@@ -84,7 +84,8 @@ ________________________________________
 🔹 [Create Log Analytics Workspace]
 
 -- Search or click Log Analytics  >  create > 
--- Input same region and same resource grtoup and input the name as DLGR1-LA
+
+-- Input same region and same resource group and input the log analytics name as DLGR1-LA
 
   ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/08%20Create%20LogAnalytics%20workspace01.jpg?raw=true)
   ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/09%20Create%20LogAnalytics%20workspace02.jpg?raw=true)
@@ -108,11 +109,33 @@ ________________________________________
 
 🔹 [Enable Sentinel]
 
-•	Azure Portal > Microsoft Sentinel > + Add > Select SecOpsWorkspace
+•	Azure Portal > Microsoft Sentinel > + Add > Select DLGR1-LA
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/23%20link%20with%20Sentinel01.jpg?raw=true)
 
 🔹 [Add Data Connectors]
 
-•	Enable for Windows Security Events, Syslog, Defender for cloud
+•	Enable for Windows Security Events, Syslog, Defender for cloud etc
+
+-- Click data connectors
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/25%20link%20with%20Sentinel02.jpg?raw=true)
+
+-- Click Content hub > click necessary item > Install
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/26%20link%20with%20Sentinel03.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/27%20link%20with%20Sentinel04.jpg?raw=true)
+
+🔹 [Create Data Collection Rule]
+-- Once installation is done > go to the content title > manage
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector01.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector02.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector03.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector04.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector05.jpg?raw=true)
+
+
 
 🔹 [Verify Log Ingestion]
 
