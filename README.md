@@ -253,14 +253,16 @@ ________________________________________
 -- Wait around 5 mins and check the watchlist items
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/59%20Create%20workbook04.jpg?raw=true)
 
-[🔹 Verify Log Ingestion]
+[🔹 Verify Log Ingestion and create attackmap]
 
-
-
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/60%20Create%20workbook01.jpg?raw=true)
 
 •	Create workbook > Add map, bar chart, and table visuals
 
 •	Save as Attack Map and can pin to Azure dashboard
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/61%20Create%20Workbook02.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/62%20Create%20workbook03.jpg?raw=true)
 
 
 [🔗 Compliance]
