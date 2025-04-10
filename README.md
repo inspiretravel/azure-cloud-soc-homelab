@@ -76,7 +76,21 @@ Create window machine and Linux machine for sending the log to Sentinel
 
 •	Ubuntu 20.04: Enable SSH, configure ufw, assign public IP.
 
-<div></div><div></div>
+
+________________________________________
+
+📊 Step 2: Configure Log Analytics
+
+🔹 [Create Log Analytics Workspace]
+
+-- Search or click Log Analytics  >  create > 
+-- Input same region and same resource grtoup and input the name as DLGR1-LA
+
+  ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/08%20Create%20LogAnalytics%20workspace01.jpg?raw=true)
+  ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/09%20Create%20LogAnalytics%20workspace02.jpg?raw=true)
+
+  
+
 🔹 [Enable Defender for Cloud]
 
 •	Onboard Windows VM via Azure Security Center > Microsoft Defender portal.
@@ -88,46 +102,36 @@ Create window machine and Linux machine for sending the log to Sentinel
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/12%20MS%20for%20cloud%2003.jpg?raw=true)
 
 
-
-🔗 Compliance:
-
-•	ISO 27001 A.12.4.1: Event logging enabled.
-
-•	Essential Eight: Endpoint hardening aligns with Patch Applications.
-________________________________________
-
-📊 Step 2: Configure Log Analytics
-
-🔹 Create Log Analytics Workspace
-
-az monitor log-analytics workspace create \
-  --resource-group CyberSecLab \
-  --workspace-name SecOpsWorkspace
-  
-🔹 Connect Log Sources
-
-•	Install agents on Windows/Linux VMs
-•	Enable Azure Firewall or VM-based firewall logging
-
-🔗 Compliance
-
-•	ISO 27001 A.12.4.2: Integrity of logs via centralized collection
-•	Essential Eight: Application Control supported by log visibility
 ________________________________________
 
 🧠 Step 3: Activate Microsoft Sentinel
 
-🔹 Enable Sentinel
+🔹 [Enable Sentinel]
+
 •	Azure Portal > Microsoft Sentinel > + Add > Select SecOpsWorkspace
-🔹 Add Data Connectors
-•	Enable for Windows Security Events, Syslog, Defender for Endpoint, Azure Firewall
-🔹 Verify Log Ingestion
+
+🔹 [Add Data Connectors]
+
+•	Enable for Windows Security Events, Syslog, Defender for cloud
+
+🔹 [Verify Log Ingestion]
+
 SecurityEvent | take 10
 
-🔗 Compliance
+🔗 Compliance between step 1 to 3
+
+•	ISO 27001 A.12.4.1: Event logging enabled
+
+•	Essential Eight: Endpoint hardening aligns with Patch Applications
+
+•	ISO 27001 A.12.4.2: Integrity of logs via centralized collection
+
+•	Essential Eight: Application Control supported by log visibility
 
 •	ISO 27001 A.12.4.3: Admin/operator activity tracking
+
 •	Essential Eight: Admin privilege monitoring
+
 ________________________________________
 
 🔎 Step 4: Threat Detection with KQL
