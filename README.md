@@ -145,6 +145,10 @@ ________________________________________
 
 SecurityEvent | take 10
 
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/81%20Sentinel%20logs%20checking.jpg?raw=true)
+
+
+
 🔗 Compliance between step 1 to 3
 
 •	ISO 27001 A.12.4.1: Event logging enabled
