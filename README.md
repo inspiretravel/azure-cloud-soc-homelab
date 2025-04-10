@@ -131,7 +131,7 @@ ________________________________________
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector03.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/33%20Create%20Data%20connector04.jpg?raw=true)
 
--- Check the status of data connectors
+-- check the status of data connectors
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/35%20Create%20Data%20connector05.jpg?raw=true)
 
@@ -216,9 +216,9 @@ ________________________________________
 Sentinel > Incidents> View full detail
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard.jpg?raw=true)
 
--- assign the incident to SOC team member
+-- Assign the incident to SOC team member
 
--- change the incident status, put the incident comment 
+-- Change the incident status, put the incident comment 
 
 -- Click Investigate > understand the incident workflow
 
