@@ -23,9 +23,7 @@ ________________________________________
 •	Align with compliance standards and cybersecurity frameworks.
 
 ________________________________________
-🧩 Core Components
-
-Component	Description:
+🧩 Core Components:
 
 •Sentinel & Log Analytics Central log collection and analysis from virtual assets and security tools.
 
@@ -39,8 +37,6 @@ ________________________________________
 🔧 Prerequisites
 
 •	Azure subscription (free or pay-as-you-go)
-
-•	Azure CLI, PowerShell, Git, and VS Code
 
 •	Familiarity with VMs, Azure Portal, and basic security concepts
 
