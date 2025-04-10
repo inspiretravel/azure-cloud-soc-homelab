@@ -225,7 +225,7 @@ Sentinel > Incidents> View full detail
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard01.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard02.jpg?raw=true)
 
-🔹 Threat Hunting
+[🔹 Threat Hunting]
 
 --	Sentinel > Hunting > Run saved/custom queries
 
@@ -236,27 +236,23 @@ Sentinel > Incidents> View full detail
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/90%20Hunting%2004.jpg?raw=true)
 
 
-🔹 Block Malicious IPs
+[🔹 Block Malicious IPs]
 
-az network nsg rule create \
-  --resource-group CyberSecLab \
-  --nsg-name NSG1 \
-  --name BlockMaliciousIP \
-  --priority 100 \
-  --source-address-prefixes 1.2.3.4 \
-  --destination-port-ranges 3389 \
-  --access Deny \
-  --protocol Tcp \
-  --direction Inbound
-  
-🔹 Automate Response
+-- network nsg rule > create 
 
-•	Sentinel > Automation > + Playbook (Logic App for Slack/email alerts)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/91%20win%20network%20security%20group.jpg?raw=true)
 
-🔗 Compliance
+ 
+[🔹 Automate Response]
 
-•	ISO 27001 A.16.1.5: Structured response workflow
-•	Essential Eight: Enhances access control alongside MFA
+--	Sentinel > Automation > + Playbook (Logic App for Slack/email alerts)
+
+[🔗 Compliance]
+
+|ISO 27001|Essential Eight|
+|-----------------------------------------------|----------------------------|
+|Structured response workflow|Enhances access control alongside MFA|
+
 ________________________________________
 
 🌍 Step 6: Visualize Threats
