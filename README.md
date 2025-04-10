@@ -254,10 +254,6 @@ Sentinel > Incidents> View full detail
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/91%20win%20network%20security%20group.jpg?raw=true)
 
- 
-[🔹 Automate Response]
-
---	Sentinel > Automation > + Playbook (Logic App for Slack/email alerts)
 
 [🔗 Compliance]
 
