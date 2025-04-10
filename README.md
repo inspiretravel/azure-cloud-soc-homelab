@@ -215,6 +215,15 @@ ________________________________________
 Sentinel > Incidents> View full detail
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard.jpg?raw=true)
 
+-- assign the incident to SOC team member
+
+-- change the incident status, put the incident comment 
+
+-- Click Investigate > understand the incident workflow
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard01.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard02.jpg?raw=true)
+
 🔹 Threat Hunting
 
 •	Sentinel > Hunting > Run saved/custom queries
