@@ -48,7 +48,7 @@ ________________________________________
 
 🛠️ Step 1: Build the Environment
 
-🔹 Create Resource Group
+🔹 [Create Resource Group]
 
 -- Search or click resource groups >  create > 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/01%20Create%20RG1.jpg?raw=true) 
@@ -61,7 +61,7 @@ ________________________________________
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/03%20Create%20RG3.jpg?raw=true)
 
 
-🔹 Deploy Virtual Machines
+🔹 [Deploy Virtual Machines]
 
 Create window machine and Linux machine for sending the log to Sentinel
 
@@ -77,11 +77,12 @@ Create window machine and Linux machine for sending the log to Sentinel
 •	Ubuntu 20.04: Enable SSH, configure ufw, assign public IP.
 
 
-🔹 Enable Defender for Endpoint
+🔹 [Enable Defender for Cloud]
 
 •	Onboard Windows VM via Azure Security Center > Microsoft Defender portal.
 
-🔗 Compliance
+
+🔗 Compliance:
 
 •	ISO 27001 A.12.4.1: Event logging enabled.
 
