@@ -72,6 +72,7 @@ Create window machine and Linux machine for sending the log to Sentinel
 
 •	Ubuntu 20.04: Enable SSH, configure ufw, assign public IP.
 
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/93%20create%20linux%20VM.jpg?raw=true)
 
 ________________________________________
 
@@ -126,15 +127,18 @@ ________________________________________
 
 -- Once installation is done > go to the desired content title > manage
 
+-- Select select data source and destination
+
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/29%20Create%20Data%20connector01.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/30%20Create%20Data%20connector02.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/32%20Create%20Data%20connector03.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/33%20Create%20Data%20connector04.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/93%20linux%20VM%20collection%20log.jpg?raw=true)
 
--- check the status of data connectors
+-- Check the status of data connectors
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/35%20Create%20Data%20connector05.jpg?raw=true)
-
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/94%20LAW%20linux%20connect%20status.jpg?raw=true)
 
 
 [🔹 Verify Log Ingestion]
