@@ -211,6 +211,10 @@ ________________________________________
 
 ⚠️ Step 5: Incident Response
 
+🔹Incident Handling
+Sentinel > Incidents> View full detail
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/89%20Incident%20dashboard.jpg?raw=true)
+
 🔹 Threat Hunting
 
 •	Sentinel > Hunting > Run saved/custom queries
