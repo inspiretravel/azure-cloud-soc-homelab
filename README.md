@@ -160,13 +160,13 @@ ________________________________________
 
 🔎 Step 4: Threat Detection with KQL
 
-🔹 Brute-Force Detection (Windows)
+[🔹 Brute-Force Detection (Windows)]
 
 SecurityEvent
 
 | where EventID == 4625
 
-| summarize Attempts = count() by IPaddress, Computer
+| summarize Attempts = count() by IpAddress, Computer
 
 | where Attempts > 10
 
@@ -179,21 +179,28 @@ Finding: Within 24 hours, the most bruce force attack came from Netherlands
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/83%20KQL%20Brute%20Force%20IP.jpg?raw=true)
 
 
-🔹 SSH Failures (Linux)
+[🔹 SSH Failures (Linux)]
 
 Syslog
 | where Facility == "auth" and Message contains "Failed password"
 | summarize Count = count() by HostIP
 | where Count > 5
 
-🔹 Create Alert Rules
+[🔹 Create Alert Rules]
 
 •	Sentinel > Analytics > + Create > Paste KQL > Set frequency & threshold
 
-🔗 Compliance
 
-•	ISO 27001 A.12.4.4: Enhanced log-based detections
-•	Essential Eight: Detection supports patching processes
+
+
+
+[🔗 Compliance]
+
+| ISO 27001                                      | Essential Eight        |
+|-----------------------------------------------|----------------------------|
+| Enhanced log-based detections     |Detection supports patching processes |
+
+
 ________________________________________
 
 ⚠️ Step 5: Incident Response
