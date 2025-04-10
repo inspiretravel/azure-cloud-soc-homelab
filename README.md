@@ -51,6 +51,10 @@ ________________________________________
 
 az group create --name CyberSecLab --location australiaeast
 
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/01%20Create%20RG1.jpg?raw=true) 
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/02%20Create%20RG2.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/03%20Create%20RG3.jpg?raw=true)
+
 🔹 Deploy Virtual Machines
 
 •	Windows Server 2022: Assign public IP (to be restricted later).
