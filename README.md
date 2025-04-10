@@ -194,9 +194,11 @@ Finding: Within 24 hours, the most bruce force attack came from Netherlands
 [🔹 SSH Failures (Linux)]
 
 Syslog
-| where Facility == "auth" and Message contains "Failed password"
+| where Facility == "auth" and SyslogMessage contains "invalid user"
 | summarize Count = count() by HostIP
 | where Count > 5
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/95%20brute%20force%20linux.jpg?raw=true)
 
 [🔹 Create Alert Rules]
 
