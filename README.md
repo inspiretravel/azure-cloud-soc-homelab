@@ -242,9 +242,19 @@ ________________________________________
 
 [🔹 Build Dashboards]
 
-SecurityEvent
-| summarize Count = count() by SourceIP
-| extend Geo = geo_info_from_ip(SourceIP)
+•	Create watchlist and upload the ip source by country . 
+
+-- Named the watchlist as geoip, alias as geoip, searchkey as network
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/55%20create%20workbook01.JPG?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/57%20Create%20workbook02.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/58%20Create%20workbook03.jpg?raw=true)
+
+-- Wait around 5 mins and check the watchlist items
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/59%20Create%20workbook04.jpg?raw=true)
+
+[🔹 Verify Log Ingestion]
+
 
 
 
