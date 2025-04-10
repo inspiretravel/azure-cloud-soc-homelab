@@ -227,7 +227,14 @@ Sentinel > Incidents> View full detail
 
 🔹 Threat Hunting
 
-•	Sentinel > Hunting > Run saved/custom queries
+--	Sentinel > Hunting > Run saved/custom queries
+
+-- Used the existing template to create one hunting query 
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/90%20Hunting%2001.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/90%20Hunting%2002.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/90%20Hunting%2003.jpg?raw=true)
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/90%20Hunting%2004.jpg?raw=true)
+
 
 🔹 Block Malicious IPs
 
