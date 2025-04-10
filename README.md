@@ -25,15 +25,16 @@ ________________________________________
 ________________________________________
 🧩 Core Components
 
-Component	Description
+Component	Description:
 
-Sentinel & Log Analytics Central log collection and analysis from virtual assets and security tools.
+•Sentinel & Log Analytics Central log collection and analysis from virtual assets and security tools.
 
-Threat Detection KQL-based detection rules for brute-force, access attempts, and anomalies.
+•Threat Detection KQL-based detection rules for brute-force, access attempts, and anomalies.
 
-Incident Response	Manual and automated workflows to mitigate threats.
+•Incident Response	Manual and automated workflows to mitigate threats.
 
-Visualization	Dashboards with maps, charts, and timelines for visibility.
+•Visualization	Dashboards with maps, charts, and timelines for visibility.
+
 ________________________________________
 🔧 Prerequisites
 
@@ -62,22 +63,19 @@ ________________________________________
 
 🔹 Deploy Virtual Machines
 
+Create window machine and Linux machine for sending the log to Sentinel
+
+•	Windows 10 Pro: Enable RDP, configure account info, network interface.
+
 -- Search or click virtual machine >  create >
 
-•	Windows 10 Pro, same region
+•	Windows 10 Pro, assign the same region as resource groups
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/04%20Create%20VM%20win01.jpg?raw=true)
 
--- Input the account info and confirm the network setting > create
-
-![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/05%20Create%20VM%20win02.jpg?raw=true)
-
-![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/06%20Create%20VM%20win03.jpg?raw=true)
-
-
-
 
 •	Ubuntu 20.04: Enable SSH, configure ufw, assign public IP.
+
 
 🔹 Enable Defender for Endpoint
 
