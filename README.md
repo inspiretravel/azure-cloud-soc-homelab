@@ -259,35 +259,25 @@ ________________________________________
 
 📚 Compliance Summary:
 
-Under ISO 27001 Controls:
-
-Control	Implementation
-
-A.12.4	Log monitoring and analysis
-
-A.16.1	Threat response workflows
+| ISO 27001|       
+|-----------------------------------------------|
+| Control Implementation: Log monitoring and analysis, Threat response workflow| 
 
 
-Under Essential Eight Strategies:
-
-|Strategy |            Implementation|
-
+| Essential Eight                            |     |
+|-----------------------------------------------|----------------------------|
+| Strategy   |Implementation |
 |Patch Applications| Detection of unpatched system activity|
-
 |Restrict Administrative Privileges| Monitoring elevated access and usage|
 
-|Multi-Factor Authentication|	Access visibility enhances MFA enforcement|
 ________________________________________
 
 📌 Resources:
 
 •	GitHub: Azure Sentinel Samples
 
-•	YouTube:
+•	YouTube: Microsoft Mechanics – Sentinel Setup, John Savill – Azure Lab Guide
 
-o	Microsoft Mechanics – Sentinel Setup
-
-o	John Savill – Azure Lab Guide
 ________________________________________
 
 📦 Deliverables:
@@ -298,5 +288,5 @@ ________________________________________
 
 •	Geolocation dashboard
 
-•	GitHub repo with README and optional PDF guide
+
 
