@@ -151,11 +151,11 @@ SecurityEvent
 
 Applied in step 1 to 3
 
-| ISO 27001                                      | Essential Eight        |
+|ISO 27001| Essential Eight|
 |-----------------------------------------------|----------------------------|
-| Event logging enabled      |Application Control supported by log visibility |
-| Integrity of logs via centralized collection| |
-| Admin/operator activity tracking |Admin privilege monitoring|
+|Event logging enabled|Application Control supported by log visibility|
+|Integrity of logs via centralized collection||
+|Admin/operator activity tracking|Admin privilege monitoring|
 
 
 ________________________________________
@@ -203,10 +203,9 @@ Syslog
 
 [🔗 Compliance]
 
-| ISO 27001                                      | Essential Eight        |
+|ISO 27001|Essential Eight|
 |-----------------------------------------------|----------------------------|
-| Enhanced log-based detections     |Detection supports patching processes |
-
+|Enhanced log-based detections|Detection supports patching processes|
 
 ________________________________________
 
@@ -241,34 +240,40 @@ ________________________________________
 
 🌍 Step 6: Visualize Threats
 
-🔹 Build Dashboards
+[🔹 Build Dashboards]
 
 SecurityEvent
 | summarize Count = count() by SourceIP
 | extend Geo = geo_info_from_ip(SourceIP)
+
+
+
 •	Create workbook > Add map, bar chart, and table visuals
-•	Save as GeoThreats and pin to Azure dashboard
 
-🔗 Compliance
+•	Save as Attack Map and can pin to Azure dashboard
 
-•	ISO 27001 A.12.4.1: Log visualization enhances event review
 
-•	Essential Eight: Improves threat visibility and response time
+[🔗 Compliance]
+
+|ISO 27001|Essential Eight|
+|-----------------------------------------------|----------------------------|
+|Log visualization enhances event review|Improves threat visibility and response time|
+
 
 ________________________________________
 
 📚 Compliance Summary:
 
-| ISO 27001|       
+|ISO 27001|       
 |-----------------------------------------------|
-| Control Implementation: Log monitoring and analysis, Threat response workflow| 
+|Control Implementation: Log monitoring and analysis, Threat response workflow| 
 
 
-| Essential Eight                            |     |
+| Essential Eight||
 |-----------------------------------------------|----------------------------|
-| Strategy   |Implementation |
-|Patch Applications| Detection of unpatched system activity|
-|Restrict Administrative Privileges| Monitoring elevated access and usage|
+|Strategy|Implementation|
+|Patch Applications|Detection of unpatched system activity|
+|Restrict Administrative Privileges|Monitoring elevated access and usage|
 
 ________________________________________
 
