@@ -305,7 +305,7 @@ ________________________________________
 
 •	GitHub: Azure Sentinel Samples
 
-•	YouTube: Microsoft Mechanics – Sentinel Setup, John Savill – Azure Lab Guide
+•	YouTube: Microsoft Mechanics – Sentinel Setup, John Savill – Azure Lab Guide, Josh Madakor 
 
 ________________________________________
 
