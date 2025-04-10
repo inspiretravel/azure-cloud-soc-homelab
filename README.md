@@ -44,64 +44,98 @@ ________________________________________
 •	Familiarity with VMs, Azure Portal, and basic security concepts
 
 ________________________________________
+
 🛠️ Step 1: Build the Environment
 
 🔹 Create Resource Group
+
 az group create --name CyberSecLab --location australiaeast
+
 🔹 Deploy Virtual Machines
+
 •	Windows Server 2022: Assign public IP (to be restricted later).
 •	Ubuntu 20.04: Enable SSH, configure ufw, assign public IP.
+
 🔹 Enable Defender for Endpoint
+
 •	Onboard Windows VM via Azure Security Center > Microsoft Defender portal.
+
 🔗 Compliance
+
 •	ISO 27001 A.12.4.1: Event logging enabled.
+
 •	Essential Eight: Endpoint hardening aligns with Patch Applications.
 ________________________________________
+
 📊 Step 2: Configure Log Analytics
+
 🔹 Create Log Analytics Workspace
+
 az monitor log-analytics workspace create \
   --resource-group CyberSecLab \
   --workspace-name SecOpsWorkspace
+  
 🔹 Connect Log Sources
+
 •	Install agents on Windows/Linux VMs
 •	Enable Azure Firewall or VM-based firewall logging
+
 🔗 Compliance
+
 •	ISO 27001 A.12.4.2: Integrity of logs via centralized collection
 •	Essential Eight: Application Control supported by log visibility
 ________________________________________
+
 🧠 Step 3: Activate Microsoft Sentinel
+
 🔹 Enable Sentinel
 •	Azure Portal > Microsoft Sentinel > + Add > Select SecOpsWorkspace
 🔹 Add Data Connectors
 •	Enable for Windows Security Events, Syslog, Defender for Endpoint, Azure Firewall
 🔹 Verify Log Ingestion
 SecurityEvent | take 10
+
 🔗 Compliance
+
 •	ISO 27001 A.12.4.3: Admin/operator activity tracking
 •	Essential Eight: Admin privilege monitoring
 ________________________________________
+
 🔎 Step 4: Threat Detection with KQL
+
 🔹 Brute-Force Detection (Windows)
+
 SecurityEvent
 | where EventID == 4625
 | summarize Attempts = count() by SourceIP, Computer
 | where Attempts > 10
 | order by Attempts desc
+
 🔹 SSH Failures (Linux)
+
 Syslog
 | where Facility == "auth" and Message contains "Failed password"
 | summarize Count = count() by HostIP
 | where Count > 5
+
 🔹 Create Alert Rules
+
 •	Sentinel > Analytics > + Create > Paste KQL > Set frequency & threshold
+
 🔗 Compliance
+
 •	ISO 27001 A.12.4.4: Enhanced log-based detections
 •	Essential Eight: Detection supports patching processes
 ________________________________________
+
 ⚠️ Step 5: Incident Response
+
 🔹 Threat Hunting
+
 •	Sentinel > Hunting > Run saved/custom queries
+
 🔹 Block Malicious IPs
+
 az network nsg rule create \
   --resource-group CyberSecLab \
   --nsg-name NSG1 \
@@ -112,12 +146,17 @@ az network nsg rule create \
   --access Deny \
   --protocol Tcp \
   --direction Inbound
+  
 🔹 Automate Response
+
 •	Sentinel > Automation > + Playbook (Logic App for Slack/email alerts)
+
 🔗 Compliance
+
 •	ISO 27001 A.16.1.5: Structured response workflow
 •	Essential Eight: Enhances access control alongside MFA
 ________________________________________
+
 🌍 Step 6: Visualize Threats
 
 🔹 Build Dashboards
@@ -135,9 +174,10 @@ SecurityEvent
 •	Essential Eight: Improves threat visibility and response time
 
 ________________________________________
-📚 Compliance Summary
 
-ISO 27001 Controls:
+📚 Compliance Summary:
+
+Under ISO 27001 Controls:
 
 Control	Implementation
 
@@ -145,25 +185,30 @@ A.12.4	Log monitoring and analysis
 
 A.16.1	Threat response workflows
 
-Essential Eight Strategies:
 
-Strategy	Implementation
+Under Essential Eight Strategies:
 
-Patch Applications	Detection of unpatched system activity
+|Strategy |            Implementation|
 
-Restrict Administrative Privileges	Monitoring elevated access and usage
+|Patch Applications| Detection of unpatched system activity|
 
-Multi-Factor Authentication	Access visibility enhances MFA enforcement
+|Restrict Administrative Privileges| Monitoring elevated access and usage|
+
+|Multi-Factor Authentication|	Access visibility enhances MFA enforcement|
 ________________________________________
-📌 Resources
+
+📌 Resources:
 
 •	GitHub: Azure Sentinel Samples
 
 •	YouTube:
+
 o	Microsoft Mechanics – Sentinel Setup
+
 o	John Savill – Azure Lab Guide
 ________________________________________
-📦 Deliverables
+
+📦 Deliverables:
 
 •	Fully configured Azure SOC lab (Sentinel + VMs + Defender)
 
