@@ -80,7 +80,9 @@ Create window machine and Linux machine for sending the log to Sentinel
 🔹 [Enable Defender for Cloud]
 
 •	Onboard Windows VM via Azure Security Center > Microsoft Defender portal.
-- Make sure go to subscription > environment setting > turn on the necessary plan (e.g. defender CPSM, servers etc)
+
+-- Make sure go to subscription > environment setting > turn on the necessary plan (e.g. defender CPSM, servers etc)
+ 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/10%20MS%20for%20cloud%2001.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/11%20MS%20for%20cloud%2002.jpg?raw=true)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/12%20MS%20for%20cloud%2003.jpg?raw=true)
