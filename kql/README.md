@@ -37,6 +37,7 @@ SigninLogs
    
 Identifies sign-ins from geographic locations not seen before for a user.
 
+-- How to simulate this case? Using VPN switching difference locaiton and login with the same id in azure portal
 
 SigninLogs
 
@@ -82,14 +83,18 @@ AzureActivity
  
 Detects when a user is added to a privileged group (e.g., Global Admins).
 
+-- How to simulate this case? Create new user id and add the global admiistrator
 
 AuditLogs
 
 | where OperationName == "Add member to role"
 
-| where TargetResources has "Company Administrator"
+| where TargetResources has "Administrator"
 
 | project TimeGenerated, InitiatedBy, TargetResources
+
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL09.jpg?raw=true)
 
 🔍 Tracks critical changes to Azure AD privileges.
 
