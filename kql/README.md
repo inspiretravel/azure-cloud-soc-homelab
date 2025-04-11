@@ -1,6 +1,6 @@
 
 
-Let’s level this up 🔥 — here’s a Top 10 KQL Use Cases list used by real businesses in Microsoft Sentinel including both Azure cloud services and virtual machines (Windows & Linux). These are battle-tested queries for threat hunting, behavior analytics, brute-force detection, and cloud abuse detection.
+Let’s level this up 🔥 — here’s a Top 5 KQL Use Cases list used by real businesses in Microsoft Sentinel including both Azure cloud services and virtual machines (Windows & Linux). These are battle-tested queries for threat hunting, behavior analytics, brute-force detection, and cloud abuse detection.
 
 
 ✅ Real-World KQL Queries for Microsoft Sentinel (Across Azure Cloud & Virtual Machines)
