@@ -3,7 +3,7 @@
 Let’s level this up 🔥 — here’s a Top 10 KQL Use Cases list used by real businesses in Microsoft Sentinel including both Azure cloud services and virtual machines (Windows & Linux). These are battle-tested queries for threat hunting, behavior analytics, brute-force detection, and cloud abuse detection.
 
 
-✅ Top 10 Real-World KQL Queries for Microsoft Sentinel (Across Azure Cloud & Virtual Machines)
+✅ Real-World KQL Queries for Microsoft Sentinel (Across Azure Cloud & Virtual Machines)
 
 
 1. 🚨 Azure Sign-In Brute Force Detection
@@ -60,26 +60,8 @@ SigninLogs
 
 
 
-3. 🛠️ Azure Resource Modification by Non-Admin
-   
-Alerts when non-admins change sensitive resources like NSGs or Key Vaults.
 
-
-AzureActivity 
-
-| where OperationNameValue contains "Write"
-
-| where ResourceProviderValue in ("Microsoft.Network/networkSecurityGroups", "Microsoft.KeyVault/vaults")
-
-| where Caller != "admin@yourdomain.com"
-
-| project TimeGenerated, Caller, OperationNameValue, Resource, ResourceGroup
-
-
-🔍 Flags potential misuse or insider threats.
-
-
-4. 🔐 Elevation of Privileges in Azure AD
+3. 🔐 Elevation of Privileges in Azure AD
  
 Detects when a user is added to a privileged group (e.g., Global Admins).
 
@@ -99,7 +81,7 @@ AuditLogs
 🔍 Tracks critical changes to Azure AD privileges.
 
 
-5. 🕵️‍♂️ Linux SSH Brute Force (VM)
+4. 🕵️‍♂️ Linux SSH Brute Force (VM)
    
 Same as before — brute force detection for Linux via SSH.
 
@@ -118,7 +100,7 @@ Syslog
 
 
 
-6. 🪟  Brute Force (Windows VM)
+5. 🪟  Brute Force (Windows VM)
    
 Same as before — Windows brute force detection .
 
@@ -132,92 +114,5 @@ SecurityEvent
 | where FailedAttempts > 5
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL07.jpg?raw=true)
-
-
-7. 🌐 Unusual Outbound Network Traffic (Cloud & VMs)
-Detects VM or Azure workload traffic to rare or suspicious locations.
-
-
-AzureNetworkAnalytics_CL
-
-| where Direction_s == "Outbound"
-
-| where RemoteIPCountry !in ("Australia", "United States")
-
-| summarize Connections = count() by RemoteIPCountry, RemoteIP, bin(TimeGenerated, 1h)
-
-| where Connections > 5
-
-🔍 Helps detect beaconing or data exfiltration.
-
-
-8. 🧬 Rare Process Execution (Windows/Linux)
-   
-Looks for rarely seen processes across all endpoints.
-
-
-DeviceProcessEvents
-
-| summarize Count = count() by FileName
-
-| order by Count asc
-
-| take 20
-
-
-🔍 Detects unknown malware or scripts.
-
-9. 🧭 Impossible Travel Detection
-
-    
-Logins from geographically impossible locations based on last login.
-
-
-let timeFrame = 1d;
-
-SigninLogs
-
-| where TimeGenerated > ago(timeFrame)
-
-| project UserPrincipalName, Location, TimeGenerated, IPAddress
-
-| join kind=inner (
-
-SigninLogs
-
-| where TimeGenerated > ago(timeFrame)
-
-| project UserPrincipalName, Location, TimeGenerated, IPAddress
-
-) on UserPrincipalName
-
-| where abs(datetime_diff("minute", TimeGenerated1, TimeGenerated2)) < 60
-
-| where Location1 != Location2
-
-🔍 Correlates two login events that couldn't happen due to time + location constraints.
-
-
-10. 🧪 Defender for Endpoint Alert with Process Context
-    
-Correlates an alert with process execution on a VM.
-
-
-AlertEvidence
-
-| where EntityType == "Process"
-
-| join kind=inner ( 
-
-DeviceProcessEvents
-
-| project Timestamp, FileName, ProcessCommandLine, DeviceName   
-
-) on $left.DeviceName == $right.DeviceName
-
-| project Timestamp, FileName, ProcessCommandLine
-
-🔍 Links an alert to actual command-line evidence from Defender for Endpoint.
-
 
 
