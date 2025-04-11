@@ -44,11 +44,11 @@ SigninLogs
 
 | join kind=inner (
 
-    SigninLogs    
+SigninLogs    
 
-    | summarize by UserPrincipalName, Location, TimeGenerated
+| summarize by UserPrincipalName, Location, TimeGenerated
 
-) on UserPrincipalName
+ ) on UserPrincipalName
 
 
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL05.jpg?raw=true)
@@ -64,7 +64,7 @@ SigninLogs
 Alerts when non-admins change sensitive resources like NSGs or Key Vaults.
 
 
-AzureActivity
+AzureActivity 
 
 | where OperationNameValue contains "Write"
 
@@ -178,12 +178,12 @@ SigninLogs
 
 | join kind=inner (
 
-    SigninLogs
-    
-    | where TimeGenerated > ago(timeFrame)
-    
-    | project UserPrincipalName, Location, TimeGenerated, IPAddress
-    
+SigninLogs
+
+| where TimeGenerated > ago(timeFrame)
+
+| project UserPrincipalName, Location, TimeGenerated, IPAddress
+
 ) on UserPrincipalName
 
 | where abs(datetime_diff("minute", TimeGenerated1, TimeGenerated2)) < 60
@@ -202,12 +202,12 @@ AlertEvidence
 
 | where EntityType == "Process"
 
-| join kind=inner (
+| join kind=inner ( 
 
-    DeviceProcessEvents
-    
-    | project Timestamp, FileName, ProcessCommandLine, DeviceName
-    
+DeviceProcessEvents
+
+| project Timestamp, FileName, ProcessCommandLine, DeviceName   
+
 ) on $left.DeviceName == $right.DeviceName
 
 | project Timestamp, FileName, ProcessCommandLine
