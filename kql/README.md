@@ -30,6 +30,7 @@ SigninLogs
 🔍 Catches brute-force attempts against Azure AD accounts.
 
 
+
 2. 🧠 Unusual User Sign-in Locations
    
 Identifies sign-ins from geographic locations not seen before for a user.
@@ -53,6 +54,7 @@ SigninLogs
 
 
 🔍 Detects travel-based or impossible logins (e.g. “impossible travel” from two distant locations).
+
 
 
 3. 🛠️ Azure Resource Modification by Non-Admin
@@ -106,20 +108,20 @@ Syslog
 | where FailedAttempts > 10
 
 
-6. 🪟 RDP Brute Force (Windows VM)
+6. 🪟  Brute Force (Windows VM)
    
-Same as before — Windows brute force detection via RDP.
+Same as before — Windows brute force detection .
 
 
 SecurityEvent
 
 | where EventID == 4625
 
-| where LogonType == 10
-
 | summarize FailedAttempts = count() by IpAddress, Account, bin(TimeGenerated, 1h)
 
 | where FailedAttempts > 5
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL07.jpg?raw=true)
 
 
 7. 🌐 Unusual Outbound Network Traffic (Cloud & VMs)
