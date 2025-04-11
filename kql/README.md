@@ -107,6 +107,9 @@ Syslog
 
 | where FailedAttempts > 10
 
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL08.jpg?raw=true)
+
+
 
 6. 🪟  Brute Force (Windows VM)
    
