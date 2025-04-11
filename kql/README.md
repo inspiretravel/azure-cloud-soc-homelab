@@ -8,6 +8,13 @@ Let’s level this up 🔥 — here’s a Top 10 KQL Use Cases list used by real
 
 Detects multiple failed sign-ins from the same IP within a short time.
 
+-- How to simulate this case? Create new user id and login multiple time in azure portal.
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL02.jpg?raw=true)
+
+-- Vertify the log 
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL01.jpg?raw=true)
+
+-- Sentinel > Log
 
 SigninLogs
 
@@ -15,7 +22,10 @@ SigninLogs
 
 | summarize FailedAttempts = count() by IPAddress, UserPrincipalName, bin(TimeGenerated, 1h)
 
-| where FailedAttempts > 10
+| where FailedAttempts > 5
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL03.jpg?raw=true)
+
 
 🔍 Catches brute-force attempts against Azure AD accounts.
 
@@ -31,13 +41,16 @@ SigninLogs
 
 | join kind=inner (
 
-    SigninLogs
-    
+    SigninLogs    
+
     | summarize by UserPrincipalName, Location, TimeGenerated
-    
+
 ) on UserPrincipalName
 
-| where Location !in (Countries)
+
+![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/kql/images/KQL05.jpg?raw=true)
+
+
 
 🔍 Detects travel-based or impossible logins (e.g. “impossible travel” from two distant locations).
 
@@ -56,6 +69,7 @@ AzureActivity
 | where Caller != "admin@yourdomain.com"
 
 | project TimeGenerated, Caller, OperationNameValue, Resource, ResourceGroup
+
 
 🔍 Flags potential misuse or insider threats.
 
@@ -194,13 +208,4 @@ AlertEvidence
 🔍 Links an alert to actual command-line evidence from Defender for Endpoint.
 
 
-🧰 Bonus:
-If you're using Microsoft Defender for Cloud, you can query recommendations and security posture like this:
-
-
-SecurityRecommendation
-
-| where RecommendationDisplayName contains "public"
-
-| project SubscriptionId, RecommendationDisplayName, ResourceId, Status
 
