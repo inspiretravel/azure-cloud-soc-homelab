@@ -149,6 +149,7 @@ Under Log Analytics workspace > Agent
 
 [🔹 Verify Log Ingestion]
 
+'''kql
 SecurityEvent 
 
 | take 10
