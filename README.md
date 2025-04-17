@@ -175,13 +175,9 @@ ________________________________________
 [🔹 Brute-Force Detection (Windows)]
 ```
 SecurityEvent
-
 | where EventID == 4625
-
 | summarize Attempts = count() by IpAddress, Computer
-
 | where Attempts > 10
-
 | order by Attempts desc
 ```
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/82%20KQL%20Brute%20Force.jpg?raw=true)
