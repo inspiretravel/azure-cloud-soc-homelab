@@ -1,8 +1,8 @@
-##🎯 Objectives:
+## 🎯 Objectives:
 
 Automation rules and playbooks in Sentinel aim to automate repetitive tasks, speed up threat responses, and improve SOC efficiency bu handling alerts and incidents with less manual work
 
-##🛠️ How to apply:
+## 🛠️ How to apply:
 
 • 1. Create via Sentinel Automation (e.g. change the severity level)
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/automation/images/99%20auto%20Playbook01.jpg?raw=true)
