@@ -327,6 +327,7 @@ ________________________________________
 
 ## ✍️ Contiue learning
 
-KQL
-Automation 
+<a href="https://github.com/inspiretravel/azure-cloud-soc-homelab/tree/main/kql">KQL</a>
+
+<a href="https://github.com/inspiretravel/azure-cloud-soc-homelab/tree/main/automation">Automation</a> 
 
