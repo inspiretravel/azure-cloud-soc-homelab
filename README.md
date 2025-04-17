@@ -309,7 +309,7 @@ ________________________________________
 
 ________________________________________
 
-## 📌 Resources:
+## 📌 Resources
 
 •	GitHub: Azure Sentinel Samples
 
@@ -317,7 +317,7 @@ ________________________________________
 
 ________________________________________
 
-## 📦 Deliverables:
+## 📦 Deliverables
 
 •	Fully configured Azure SOC lab (Sentinel + VMs + Defender)
 
@@ -325,5 +325,8 @@ ________________________________________
 
 •	Geolocation dashboard
 
+## ✍️ Contiue learning
 
+KQL
+Automation 
 
