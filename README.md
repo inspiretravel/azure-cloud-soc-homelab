@@ -1,14 +1,15 @@
 # azure-cloud-soc-homelab
+
 🚀 Azure Cloud Security Operations Lab
 Detection, Monitoring, and Response with Microsoft Sentinel
 
 ________________________________________
-🔍 Project Overview:
+## 🔍 Project Overview
 
 This home lab builds a simulated, enterprise-grade Security Operations Center (SOC) using Microsoft Azure. It integrates Microsoft Sentinel (SIEM), Log Analytics, and Microsoft Defender for Cloud to detect, investigate, and respond to real-world threats. The lab aligns with ISO 27001 and Australia’s Essential Eight, providing compliance-driven security operations experience.
 
 ________________________________________
-🎯 Objectives:
+## 🎯 Objectives
 
 •	Deploy and configure Microsoft Sentinel as a cloud-native SIEM.
 
@@ -23,7 +24,7 @@ ________________________________________
 •	Align with compliance standards and cybersecurity frameworks.
 
 ________________________________________
-🧩 Core Components:
+## 🧩 Core Components
 
 •Sentinel & Log Analytics Central log collection and analysis from virtual assets and security tools.
 
@@ -34,7 +35,7 @@ ________________________________________
 •Visualization	Dashboards with maps, charts, and timelines for visibility.
 
 ________________________________________
-🔧 Prerequisites
+## 🔧 Prerequisites
 
 •	Azure subscription (free or pay-as-you-go)
 
@@ -42,7 +43,7 @@ ________________________________________
 
 ________________________________________
 
-🛠️ Step 1: Build the Environment
+### 🛠️ Step 1: Build the Environment
 
 [🔹 Create Resource Group]
 
@@ -76,7 +77,7 @@ Create window machine and Linux machine for sending the log to Sentinel
 
 ________________________________________
 
-📊 Step 2: Configure Log Analytics
+### 📊 Step 2: Configure Log Analytics
 
 [🔹 Create Log Analytics Workspace]
 
@@ -102,7 +103,7 @@ ________________________________________
 
 ________________________________________
 
-🧠 Step 3: Activate Microsoft Sentinel
+### 🧠 Step 3: Activate Microsoft Sentinel
 
 [🔹 Enable Sentinel]
 
@@ -148,11 +149,10 @@ Under Log Analytics workspace > Agent
 
 
 [🔹 Verify Log Ingestion]
-
+```
 SecurityEvent 
-
 | take 10
-
+```
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/81%20Sentinel%20logs%20checking.jpg?raw=true)
 
 
@@ -170,10 +170,10 @@ Applied in step 1 to 3
 
 ________________________________________
 
-🔎 Step 4: Threat Detection with KQL
+### 🔎 Step 4: Threat Detection with KQL
 
 [🔹 Brute-Force Detection (Windows)]
-
+```
 SecurityEvent
 
 | where EventID == 4625
@@ -183,7 +183,7 @@ SecurityEvent
 | where Attempts > 10
 
 | order by Attempts desc
-
+```
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/82%20KQL%20Brute%20Force.jpg?raw=true)
 
 Finding: Within 24 hours, the most bruce force attack came from Netherlands
@@ -192,12 +192,12 @@ Finding: Within 24 hours, the most bruce force attack came from Netherlands
 
 
 [🔹 SSH Failures (Linux)]
-
+```
 Syslog
 | where Facility == "auth" and SyslogMessage contains "invalid user"
 | summarize Count = count() by HostIP
 | where Count > 5
-
+```
 ![Alt image](https://github.com/inspiretravel/azure-cloud-soc-homelab/blob/main/images/95%20brute%20force%20linux.jpg?raw=true)
 
 [🔹 Create Alert Rules]
@@ -221,7 +221,7 @@ Syslog
 
 ________________________________________
 
-⚠️ Step 5: Incident Response
+### ⚠️ Step 5: Incident Response
 
 [🔹Incident Handling]
 
@@ -263,7 +263,7 @@ Sentinel > Incidents> View full detail
 
 ________________________________________
 
-🌍 Step 6: Visualize Threats
+### 🌍 Step 6: Visualize Threats
 
 [🔹 Build Dashboards]
 
@@ -298,7 +298,7 @@ ________________________________________
 
 ________________________________________
 
-📚 Compliance Summary:
+## 📚 Compliance Summary:
 
 |ISO 27001|       
 |-----------------------------------------------|
@@ -313,7 +313,7 @@ ________________________________________
 
 ________________________________________
 
-📌 Resources:
+## 📌 Resources:
 
 •	GitHub: Azure Sentinel Samples
 
@@ -321,7 +321,7 @@ ________________________________________
 
 ________________________________________
 
-📦 Deliverables:
+## 📦 Deliverables:
 
 •	Fully configured Azure SOC lab (Sentinel + VMs + Defender)
 
